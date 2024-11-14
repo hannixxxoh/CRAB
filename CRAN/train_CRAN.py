@@ -86,7 +86,7 @@ train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_worker
 val_loader = DataLoader(val_dataset, batch_size=1, shuffle=False, num_workers=4)
 
 # 모델 선택
-model = CRAN(scaling_factor=args.scaling_factor)
+model = CRAN_M7(scaling_factor=args.scaling_factor)
 
 # 모델 파라미터 수 확인
 num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
